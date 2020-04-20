@@ -1,0 +1,31 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+<li id="liste" class="list-group-item">
+    <h2>
+        First Name : {{firstName}} <br>
+        Last Name : {{lastName}}<br>
+        Birthday : {{birthDay}} <br>
+        Place Of Birth : {{placeBirth}} <br>
+        Level : {{level}} <br>
+        Email : {{email}} <br>
+        Password : {{password}} <br>
+        Motivation : {{motivation}} <br>
+
+        <p [ngStyle]="{color:color()}">Reponse: {{reponse}} <span style="color:blue;" *ngIf=" retReponse()===''">{{test}}</span> </p>
+
+
+
+    </h2>
+    <div>
+        <button id="btn1" class="btn btn-success btn-lg " (click)="onAcceptDemande()">Accepter</button>
+        <button id="btn2" class="btn btn-danger btn-lg  " (click)="onRejectDemande()">Refuser</button>
+        <button id="btn3" *ngIf="retReponse()!=='' " class="btn btn-primary pull-right btn-lg "
+            (click)="onSave()">Enregistrer</button>
+
+    </div>
+
+
+</li>

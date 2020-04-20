@@ -1,0 +1,21 @@
+nav {
+    background-color:#1E90FF;
+}
+
+nav ul li a {
+    color: white;
+    font-family: cursive;
+    font-size: 20px;
+
+}
+
+nav ul li a:hover{
+    background: white !important;
+    color: #1E90FF !important;
+    font-family: cursive;
+    font-size: 25px;
+}
+
+nav ul li a:active{
+    color: #1E90FF !important;
+}

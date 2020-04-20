@@ -1,0 +1,33 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <br><br><br>
+            <h2>Réponse de L'établissement</h2>
+            <p>Bonjour {{firstName}} {{lastName}} , </p> .<br>
+            <p *ngIf="reponse1===''">Vous n'avez pas encore reçu de réponse à votre demande,veuillez revenir
+                ultérieurement.
+            </p>
+            <p *ngIf="reponse1!==''">Vous avez reçu une réponse à votre demande </p>
+            <p>Pour plus de détail :</p>
+            <h3>
+                Nom : {{firstName}} <br>
+                Prénom : {{lastName}} <br>
+                Niveau : {{level}} <br>
+                Réponse : {{reponse1}} <br>
+            </h3>
+
+            <button *ngIf="reponse1==='Refus' " class="btn btn-primary" type="submit"
+                routerLink="/auth/inscriptionE">refaire</button>
+            <button *ngIf="reponse1==='Accepté(e)'" class="btn btn-primary" type="submit"
+                routerLink="/auth/connexionE">Se connecter</button>
+        </div>
+    </div>
+</div>

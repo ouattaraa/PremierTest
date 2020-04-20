@@ -1,0 +1,22 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" >
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+<li class="list-group-item">
+ 
+    <h2>
+        First Name : {{firstName}} <br>
+        Last Name : {{lastName}} <br>
+        Level : {{level}} <br>
+    </h2>
+    <div>
+        <button class="btn success btn-lg glyphicon glyphicon-eye-open" (click)="onGetInfo()">Consulter</button>
+        <button class="btn  primary btn-lg  glyphicon glyphicon-pencil" (click)="onChange()">Modifier</button>
+        <button class="btn  btn-primary btn-lg" [routerLink]="[id]">Generez son certificat </button>
+        <button class="btn  btn-danger btn-lg  glyphicon glyphicon-remove" (click)="onRemoveStudent()">Retirer</button>
+
+
+    </div>
+
+</li>

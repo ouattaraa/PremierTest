@@ -1,0 +1,31 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-8">
+
+            <div>
+                <h1 style="text-align: center;">Section d'affiches</h1>
+                
+            </div>
+
+            <div class="affiches">
+                <app-affichage *ngFor="let affiche of affichages" [titre]="affiche.titre" [contenu]="affiche.contenu"
+                    [date]="affiche.date">
+                </app-affichage>
+            </div>
+
+            <div >
+
+                <button class="btn btn-primary btn-lg pull-right btnActualiser" type="submit" style="margin-top:60px;" (click)="onGetAffiche()" >Actualiser</button>
+                <button class="btn btn-primary btn-lg pull-right btnAnnuler" type="submit" style="margin-top:60px;" routerLink="/acceuil">Retour</button>
+    
+    
+            </div>
+           
+        </div>
+    </div>
+</div>

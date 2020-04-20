@@ -1,0 +1,37 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <br><br><br>
+            <div class="header">
+                    <h2>Réponse de L'administrateur pour votre demande d'absence. </h2>
+                </div> <br><br><br>
+                <div class="body">
+
+                <p>Bonjour {{firstName}} {{lastName}} , </p> .<br>
+                <p>Vous avez reçu une réponse à votre demande d'absence </p>
+                <p>Pour plus de détail :</p>
+                <h3>
+                    Nom : {{firstName}} <br>
+                    Prénom : {{lastName}} <br>
+                    Niveau : {{level}} <br> <br> <br>
+                    <p *ngIf="reponse==='' " style="color: blue;">Votre demande d'absence du {{dateDepart}} au
+                        {{dateRetour}} n'a pas été encore repondue.</p>
+                    <p *ngIf="reponse==='oui' " style="color: green;">Vous avez eu une permission d'absence du
+                        {{dateDepart}} au {{dateRetour}}.</p>
+                    <p id="erreur" *ngIf="reponse==='non' " style="color: red;">Desolé,votre demande d'absence du {{dateDepart}} au
+                        {{dateRetour}} a été rejetée. <br>
+                        <button class="btn btn-primary" type="submit">voir le motif</button>
+                    </p>
+
+                </h3>
+            </div>
+            <br> <br>
+
+            <button class="btn btn-primary" type="submit" routerLink="/acceuil">Retour à la page d'accueil</button>
+        </div>
+    </div>
+</div>

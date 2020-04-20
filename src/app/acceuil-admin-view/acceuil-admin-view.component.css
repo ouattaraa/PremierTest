@@ -1,0 +1,52 @@
+.header{
+    margin-top: 100px;
+    
+    text-align: center;
+    font-family: "Lato";
+    font-size: larger;
+    font-weight: bolder;
+    background:darkgray;
+    border-radius: 12px;
+    height: 120px;
+}
+.header h1{
+    margin:0;
+    padding: 0;
+    padding-top: 22px;
+    text-transform: uppercase;
+    font-size: 3em;
+    color: rgba(255, 255, 255, .1);
+    background: linear-gradient(to left,#1E90FF,rgb(0,0,255));
+    background-repeat:repeat-x ;
+    -webkit-background-clip: text;
+    animation: h1 10s linear infinite;
+}
+@keyframes h1{
+    0%{ background-position: left 0 top 80px;}
+    40%{background-position:left 800px top -50px;}
+    80%{background-position: left 1800px top -50px;}
+    100%{background-position:left 2400px top 80px;}
+}
+
+
+
+/*.img{
+    margin-top:0px;
+    background: black;
+    animation: animate 10s  1;
+    animation-iteration-count: infinite;
+}
+@keyframes animate{
+    0%,30%{
+        background: blueviolet;
+    }
+
+    50%, 70%{
+        background: darkcyan;
+    }
+   
+    80%,100%{
+        background: seagreen;
+    }
+}
+*/

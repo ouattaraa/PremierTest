@@ -1,0 +1,37 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+
+<li Class="list-group-item" [ngStyle]="{background:getColor()}">
+
+    <h3>Prénom:{{studentFirstName}} <br>Nom:{{studentLastName}} <br> Date_Naissance:{{studentBirthDay}}
+        <br>Niveau:{{studentLevel}} <br> Date-Depart:{{dateDebut}} <br> Date-Retour:{{dateFin}}
+    </h3> 
+
+    <h2>
+        Explication:{{cause}}
+    </h2>
+    <label>Réponse : {{reponse}}</label>
+    <div>
+        <button class="btn btn-success btn-lg" (click)="accepterA()" [disabled]="getReponse()==='oui'">Accepter</button>
+
+        <button class="btn btn-danger btn-lg" (click)="refuserA() " [disabled]="getReponse()==='non'">Refuser</button>
+
+        <button class="btn  primary btn-lg" (click)="annulerTraitement()"  [disabled]="!statusReponse()">Annuler la reponse</button>
+
+        <button class="btn btn-primary btn-lg" [disabled]="!statusReponse()" (click)="onSaveDemandesTraitees()">Enregistrez</button>
+
+    </div>
+    <br>
+    <div *ngIf="getColor()==='red' ">
+        <form [formGroup]="signForm" (ngSubmit)="onSubmit()">
+            <label for="motif" *ngIf="getColor()==='red'">Motif de refus: </label>
+            <input type="text" id="motif" class="form-control"  formContolName="motif">
+            <button class="btn btn-lg" type="submit" (click)="onSubmit()">Valider</button>
+        </form>
+    </div>
+
+
+</li>

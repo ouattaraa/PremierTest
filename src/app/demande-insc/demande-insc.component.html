@@ -1,0 +1,29 @@
+
+<div class="col-sm-12 tout">
+
+      <div class="header">
+        <h2>Listes des demandes d'inscription</h2>
+      </div>
+    <ul>  
+        <app-users *ngFor="let user of users ; let id = index " 
+        [firstName]="user.firstName"
+        [lastName]="user.lastName"
+        [birthDay]="user.birthDay"
+        [placeBirth]="user.placeBirth"
+        [level]="user.level"
+        [email]="user.email"
+        [password]="user.password"
+        [motivation]="user.motivation"
+        [reponse]="user.reponse"
+        [id]="user.id"      
+             
+        ></app-users>
+    </ul>
+   
+    <div class="bouton">
+        <button class="btn btn-primary">Retour</button>
+        <button class="btn btn-primary" (click)="onGetUsersDemand()" >Chargement des demandes</button>
+        
+    </div>
+
+</div>

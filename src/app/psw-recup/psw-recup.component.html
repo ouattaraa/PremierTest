@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8 colsm-offset-2 list-group-item">
+
+            <div class="center ">
+                <h2>Mot de passe oublié ?</h2>
+                <div></div>
+            </div>
+            <form [formGroup]="pswForgot" (ngSubmit)="onSubmit()">
+
+                <p>Remplissez le formulaire ci-dessous et vous recevrez votre mot de passe</p>
+                <br><br>
+
+                <div class="form-group">
+                    <label style="font-size: 20px;" for="email"> Email : </label>
+                    <input type="text" id="email" class="form-control" formControlName="email">
+                    <p style="color: red;">{{errorMessage}}</p>
+
+                </div>
+
+                <br>
+
+                <button class="btn btn-primary recover" [disabled]="pswForgot.invalid" type="submit">Récupérer</button>
+                <button class="btn btn-primary" type="reset">Annuler</button>
+
+            </form>
+        </div>
+    </div>
+</div>

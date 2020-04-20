@@ -1,0 +1,31 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" >
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+
+
+<div class="container">
+    <div class="row">
+        <h1>La liste de tous les étudiants:</h1>
+        <div class="col-sm-8">
+            <ul class="list-group">
+                <app-view-etudiant *ngFor="let accEtudiant of Acceptedetudiant ; let id=index"
+                    [firstName]="accEtudiant.firstName" 
+                    [lastName]="accEtudiant.lastName"
+                    [birthDay]="accEtudiant.birthDay" 
+                    [placeBirth]="accEtudiant.placeBirth" 
+                    [level]="accEtudiant.level"
+                    [email]="accEtudiant.email" 
+                    [password]="accEtudiant.password" 
+                    [id]="id"
+                    [motivation]="accEtudiant.motivation">
+                </app-view-etudiant>
+            </ul>
+        </div>
+        
+    </div>
+     <div class="bouton">
+        <button class="btn btn-primary" type="submit" (click)="onGetEtudiantAcc()">Chargment de la liste des étudiants</button>
+     </div>
+</div>

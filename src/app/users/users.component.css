@@ -1,0 +1,60 @@
+li{
+    padding-left: 50px;
+    margin-top: 20px;
+}
+
+#liste{
+    margin-left: 100px;
+}
+
+.list-group-item{
+    width: 650px;
+    background-color: transparent;
+    box-shadow: 8px cadetblue;
+    border: rgb(20, 157, 220)  solid 2px;
+    transition: all ease-in 1s ;
+}
+
+.list-group-item:hover{
+    transform: scale(1.0);
+    background-color: #1995AD;
+    margin-bottom:50px;
+    margin-top: 50px;
+}
+
+.btn{
+    margin-left:43%;
+    margin-top: 20px;
+    border-radius: 12px 0 12px 0;
+    background: #f5f5f5;
+    color: #555555;
+    font:bold 12px Verdana;
+    padding:12px 3 12px 3;
+    margin-left: 15px;
+    margin-top: 50 px;
+    box-shadow: 1px 1px 3px #1E90FF;  
+    font-size: 20px;
+    transition: all 0.8s ease-in 0s; 
+}
+
+
+#btn1:hover{
+    background: green;
+    color:white  ;
+    text-decoration: none;
+    font-size: xx-large;
+}
+
+#btn2:hover{
+    background: red;
+    color:white  ;
+    text-decoration: none;
+    font-size: xx-large;
+}
+
+#btn3:hover{
+    background:#1E90FF;
+    color:white  ;
+    text-decoration: none;
+    font-size: xx-large;
+}

@@ -1,0 +1,58 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+
+            <h1>Connexion</h1>
+           
+            <form [formGroup]="signinForm" (ngSubmit)="onSubmit">
+                <div class="form-group">
+                    <label for="status"> Status : </label>
+                    <input type="text"  class="form-control" id="status" formControlName="status" >
+                </div>
+                <div class="form-group">
+                    <label for="email"> Email : </label>
+                    <input type="text" class="form-control" id="email" formControlName="email">
+                </div>
+
+                <div class="form-group">
+                    <label for="password"> Password : </label>
+                    <input type="password" class="form-control" id="password" formControlName="password">
+                </div>
+                <button class="btn btn-primary" type="submit" (click)="onSubmit()" [disabled]="signinForm.invalid">Se connecter</button>
+
+            </form>
+        </div>
+
+        <div class="col-sm-8 col-sm-offset-2">
+
+            <p class="status"> Les status possibles sont(Veuillez copier coller votre status):  </p>
+
+        <h3>   Maître Assistant Classe A  <br>
+           Maître Assistant Classe B <br>
+           Maître Assistant Classe C <br>
+           Docteur Classe A <br>
+           Docteur Classe B <br>
+           Docteur Classe C <br>
+           Docteur Maître de Conférence Classe A <br>
+           Docteur Maître de Conférence Classe B <br>
+           Docteur Maître de Conférence Classe C <br>
+           Professeur Classe A <br>
+           Professeur Classe B <br>
+           Professeur Classe C   <br>        </h3>
+   
+
+        </div>
+        
+
+    </div>
+
+
+    
+   
+</div>

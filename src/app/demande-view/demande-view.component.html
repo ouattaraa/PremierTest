@@ -1,0 +1,31 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+
+<div class="col-sm-12 container">
+    <h1>Liste des Demandes</h1>
+    <ul class="list-group-item">
+
+        <app-demande *ngFor="let demande of Demande ; let i=index "
+                     [studentFirstName]="demande.studentFirstName"
+                     [studentLastName]="demande.studentLastName" 
+                     [studentBirthDay]="demande.studentBirthDay"
+                     [studentLevel]="demande.studentLevel" 
+                     [dateDebut]="demande.dateDebut" 
+                     [dateFin]="demande.dateFin"
+                     [cause]="demande.cause"
+                     [reponse]="demande.reponse"
+                     [id]="demande.id">
+        </app-demande>
+
+
+    </ul>
+    <div col-sm-4> 
+        <a class="btn1" routerLink="/accueil-admin-view">Retour</a> 
+
+        <button class="btn btn-success btn-lg pull-right" (click)="onChargeDemande()">Charger les Demandes</button>
+
+    </div>
+</div>

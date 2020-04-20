@@ -1,0 +1,28 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+
+
+
+
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+
+            <ul class="nav navbar-nav">
+                <li routerLinkActive="active"><a routerLink="acceuil">Acceueil</a></li>
+                <li routerLinkActive="active"><a routerLink="affichage-view">Affichage</a></li>
+
+
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li routerLinkActive="active"><a routerLink="/check-answer">Consulter réponse établissment</a></li>
+                <li routerLinkActive="active"><a routerLink="auth/inscriptionE">S'inscrire</a></li>
+                <li routerLinkActive="active" *ngIf="!isAuth"><a routerLink="choice-connection">Se connecter</a></li>
+                <li routerLinkActive="active" *ngIf="isAuth"><a (click)="onSignOut()">Se déconnecter</a></li>
+
+            </ul>
+    </div>
+
+</nav>

@@ -1,0 +1,19 @@
+.container-fluid{
+    margin-top: 300px;
+    margin-left:200px ;
+}
+
+h1{ 
+    text-align: center;
+}
+
+p{
+    font-size:25px;
+}
+.list-group-item{
+    background: #D3D3D3;
+}
+
+.btn{
+    margin-left: 220px;
+}

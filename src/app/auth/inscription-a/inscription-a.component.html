@@ -1,0 +1,59 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+
+
+<div class="container">
+    <h1>INSCRIPTION D'ADMINISTRATEUR</h1>
+    <div class="row">
+       
+        <div class="col-xs-12 col-offset-2">
+            <form [formGroup]="signForm" (ngSubmit)="onSubmit()">
+
+                <div class="col-xs-8" class="form-group">
+                    <label for="firstName">Prénom:</label>
+                    <input type="text" id="firstName" class="form-control" formControlName="firstName">
+                    <p style="color: red; font-size: medium; font-weight: bold;">{{firstNameErr}}</p>
+                </div>
+
+                <div class="col-xs-8" class="form-group">
+                    <label for="lastName">Nom:</label>
+                    <input type="text" id="lastName" class="form-control" formControlName="lastName">
+                    <p style="color: red; font-size: medium; font-weight: bold;">{{lastNameErr}}</p>
+                </div>
+
+                <div class="col-xs-8" class="form-group">
+                    <label for="status">Grade:</label>
+                    <select name="status" id="status" formControlName="status">
+                        <option *ngFor="let grade of status" [value]="grade">{{grade}}</option>
+                    </select>
+                    <p style="color: red; font-size: medium; font-weight: bold;">{{statusErr}}</p>
+                </div>
+
+                <div class="col-xs-8" class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" class="form-control" formControlName="email">
+                    <p style="color: red; font-size: medium; font-weight: bold;">{{emailErr}}</p>
+                </div>
+
+                <div class="col-xs-8" class="form-group">
+                    <label for="password">Mot de Passe:</label>
+                    <input type="password" id="password" class="form-control" formControlName="password">
+                    <p style="color: red; font-size: medium; font-weight: bold;">{{passwordErr}}</p> <br>
+                </div>
+
+                <div class="col-sm-8">
+
+                    <button type="submit" class="btn btn-success btn-lg pull-right" (click)="onSubmit()">Confirmez</button>
+
+                    <button (click)="onInitError()" class="btn btn-lg pull-right" type="reset">Annuler l'inscription</button>
+
+                </div>
+
+            </form>
+        </div> 
+    </div>
+</div>
+<!--[disabled]="signForm.invalid-->

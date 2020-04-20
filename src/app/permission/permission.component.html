@@ -1,0 +1,76 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" >
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<link href="http://fonts.googleapes.com/css?family=Fira+Mono:400' ">
+
+
+
+
+
+
+
+<div class="row">
+
+    <div class="col-sm-8 col-sm-offset-2">
+
+        <h1>Demande d'absence</h1>
+
+        <form (ngSubmit)="onSubmit()" [formGroup]="signupForm">
+
+            <div class="form-group" class="col-xs-12">
+                <label for="firstName">Prénom </label>
+                <input type="text" id="firstName" class="form-control" formControlName="firstName">
+            </div>
+
+            <div class="form-group" class="col-xs-12">
+                <label for="lastName">Nom: </label>
+                <input type="text" id="lastName" class="form-control" formControlName="lastName">
+            </div>
+
+            <div class="form-group" class="col-xs-12">
+                <label for="level">Niveau: </label>
+                <input type="text" id="level" class="form-control" formControlName="level">
+
+
+            </div>
+            <div class="form-group" class="col-xs-12">
+                <label for="date">Date de Naissance : </label>
+                <input type="date" id="date" class="form-control" formControlName="date">
+
+
+            </div>
+
+            <div class="form-group" class="col-xs-12">
+                <label for="dateDebut"> Date de début : </label>
+                <input type="date" id="dateDebut" min="01/01/1800" formControlName="dateDebut" class="form-control">
+            </div>
+
+            <div class="form-group" class="col-xs-12">
+                <label for="dateFin">Date de Retour </label>
+                <input type="date" id="email" class="form-control" formControlName="dateFin">
+            </div>
+
+            <div class="form-group" class="col-xs-12">
+
+                <label for="cause">Explication : </label>
+
+                <textarea id="cause" rows="4" cols="50" class="form-control" formControlName="cause"></textarea>
+
+
+            </div>
+            <div class="col-xs-12">
+                <button class="btn btn-primary" type="submit" [disabled]="signupForm.invalid" (click)="onSubmit()">Confirmer la
+                    demande</button>
+                <button class="btn btn-danger" type="submit"  [disabled]="signupForm.invalid" (click)="onCancel()">Annuler</button>
+            </div>
+
+
+        </form>
+        <p class="text-danger">{{errorMessage}}</p>
+        <p class="text-success">{{successMessage}}</p> 
+    </div>
+
+
+
+</div>

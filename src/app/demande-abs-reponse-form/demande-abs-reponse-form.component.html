@@ -1,0 +1,37 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" >
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+<div class="container"> 
+
+    <h1 style="color: blue;">Formulaire de vérification de réponse pour la demande d'absence</h1> <br> <br>
+    
+    <div class="row">
+        <div class="col-xs-12">
+          
+           <form [formGroup]="checkForm" (ngSubmit)="onSubmit()">
+               <div class="form-group">
+                   <label for="lastName">Nom : </label>
+                   <input type="text" name="lastName" id="lastName" class="form-control" formControlName="lastName">
+               </div>
+
+               <div class="form-group">
+                <label for="firstName"> Prénom : </label>
+                <input type="text" name="firstName" id="firstName" class="form-control" formControlName="firstName">
+            </div>
+
+            <div class="form-group">
+                <label for="level"> Niveau : </label>
+                <input type="text" name="level" id="level" class="form-control" formControlName="level">
+            </div>
+
+
+            <button class="btn btn-primary btn-lg" type="submit" [disabled]="checkForm.invalid">Valider</button>
+            <p style="color: red;">{{errorMessage}}</p>
+           </form>
+
+
+        </div>
+    </div>
+</div>
